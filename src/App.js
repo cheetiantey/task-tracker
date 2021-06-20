@@ -58,7 +58,7 @@ function App() {
   // Toggle Reminder
   const toggleReminder = async (id) => {
     const taskToToggle = await fetchTask(id);
-    const updatedTask = {...taskToToggle, remidner: !taskToToggle.reminder }
+    const updatedTask = {...taskToToggle, remindner: !taskToToggle.reminder }
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT",
